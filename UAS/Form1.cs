@@ -31,6 +31,9 @@ namespace UAS
             Gameover.BackColor = Color.Transparent;
             // Transparent Bird
             bird.BackColor = Color.Transparent;
+            //restart button transparent
+            restartbutton.BackColor = Color.Transparent;
+
 
         }
 
@@ -65,12 +68,12 @@ namespace UAS
             bird.Top += gravity;
 
             label1.Text = scoretotal.ToString();
-            
-                
+
+
             if (pipedown.Left < -80)
             {
                 pipedown.Left = 500;
-                
+
             }
             else if (pipeup.Left < -80)
             {
@@ -81,7 +84,7 @@ namespace UAS
             else if (pipedown2.Left < -80)
             {
                 pipedown2.Left = 500;
-                
+
             }
             else if (pipeup2.Left < -80)
             {
@@ -92,7 +95,7 @@ namespace UAS
             else if (pipedown3.Left < -80)
             {
                 pipedown3.Left = 500;
-                
+
             }
             else if (pipeup3.Left < -80)
             {
@@ -103,7 +106,7 @@ namespace UAS
             else if (pipedown4.Left < -80)
             {
                 pipedown4.Left = 500;
-                
+
             }
             else if (pipeup4.Left < -80)
             {
@@ -114,53 +117,57 @@ namespace UAS
             // kalo nabrak pipe 1
             if (bird.Bounds.IntersectsWith(pipeup.Bounds))
             {
-                Gameover.Visible = true;
-                timer1.Stop();
+                Gameovers();
             }
             else if (bird.Bounds.IntersectsWith(pipedown.Bounds))
             {
-                Gameover.Visible = true;
-                timer1.Stop();
+                Gameovers();
             }
             // kalo nabrak pipe 2
             else if (bird.Bounds.IntersectsWith(pipeup2.Bounds))
             {
-                Gameover.Visible = true;
-                timer1.Stop();
+                Gameovers();
             }
             else if (bird.Bounds.IntersectsWith(pipedown2.Bounds))
             {
-                Gameover.Visible = true;
-                timer1.Stop();
+                Gameovers();
             }
             // kalo nabrak pipe 3
             else if (bird.Bounds.IntersectsWith(pipeup3.Bounds))
             {
-                Gameover.Visible = true;
-                timer1.Stop();
+                Gameovers();
             }
             else if (bird.Bounds.IntersectsWith(pipedown3.Bounds))
             {
-                Gameover.Visible = true;
-                timer1.Stop();
+                Gameovers();
             }
             // kalo nabrak pipe 4
             else if (bird.Bounds.IntersectsWith(pipeup4.Bounds))
             {
-                Gameover.Visible = true;
-                timer1.Stop();
+                Gameovers();
             }
             else if (bird.Bounds.IntersectsWith(pipedown4.Bounds))
             {
-                Gameover.Visible = true;
-                timer1.Stop();
+                Gameovers();
             }
             // kalo nabrak ground
             else if (bird.Bounds.IntersectsWith(ground.Bounds))
             {
-                Gameover.Visible = true;
-                timer1.Stop();
+                Gameovers();
             }
+        }
+
+        public void Gameovers()
+        {
+            Gameover.Visible = true;
+            timer1.Stop();
+            restartbutton.Visible = true;
+
+        }
+
+        private void restartbutton_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
         }
     }
 }

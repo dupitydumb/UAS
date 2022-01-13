@@ -46,6 +46,7 @@ namespace UAS
             this.pipedown4 = new System.Windows.Forms.PictureBox();
             this.Gameover = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.restartbutton = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pipeup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bird)).BeginInit();
@@ -59,6 +60,7 @@ namespace UAS
             ((System.ComponentModel.ISupportInitialize)(this.pipeup4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pipedown4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Gameover)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.restartbutton)).BeginInit();
             this.SuspendLayout();
             // 
             // pipeup
@@ -192,7 +194,7 @@ namespace UAS
             // 
             this.Gameover.BackColor = System.Drawing.Color.Transparent;
             this.Gameover.Image = global::UAS.Properties.Resources.gameover;
-            this.Gameover.Location = new System.Drawing.Point(96, 237);
+            this.Gameover.Location = new System.Drawing.Point(122, 145);
             this.Gameover.Name = "Gameover";
             this.Gameover.Size = new System.Drawing.Size(324, 83);
             this.Gameover.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -210,13 +212,28 @@ namespace UAS
             this.label1.TabIndex = 13;
             this.label1.Text = "0";
             // 
+            // restartbutton
+            // 
+            this.restartbutton.BackColor = System.Drawing.Color.Transparent;
+            this.restartbutton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.restartbutton.Image = global::UAS.Properties.Resources.restartbutton1;
+            this.restartbutton.Location = new System.Drawing.Point(167, 337);
+            this.restartbutton.Name = "restartbutton";
+            this.restartbutton.Size = new System.Drawing.Size(201, 66);
+            this.restartbutton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.restartbutton.TabIndex = 14;
+            this.restartbutton.TabStop = false;
+            this.restartbutton.Visible = false;
+            this.restartbutton.Click += new System.EventHandler(this.restartbutton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(497, 601);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.restartbutton);
             this.Controls.Add(this.Gameover);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pipeup4);
             this.Controls.Add(this.pipedown4);
             this.Controls.Add(this.pipedown3);
@@ -231,6 +248,7 @@ namespace UAS
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
@@ -247,6 +265,7 @@ namespace UAS
             ((System.ComponentModel.ISupportInitialize)(this.pipeup4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pipedown4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Gameover)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.restartbutton)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -269,6 +288,7 @@ namespace UAS
         private System.Windows.Forms.PictureBox pipedown4;
         private System.Windows.Forms.PictureBox Gameover;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox restartbutton;
     }
 }
 
