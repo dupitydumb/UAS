@@ -27,7 +27,6 @@ namespace UAS
             pictureBox1.Controls.Add(bird);
             pictureBox1.Controls.Add(Gameover);
             // Transparent Gameover
-            Gameover.Location = new Point(96, 237);
             Gameover.BackColor = Color.Transparent;
             // Transparent Bird
             bird.BackColor = Color.Transparent;
@@ -167,7 +166,10 @@ namespace UAS
 
         private void restartbutton_Click(object sender, EventArgs e)
         {
-            Application.Restart();
+            Form1 f1 = new Form1();
+            f1.Show();
+            this.Hide();
         }
+
     }
 }

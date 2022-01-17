@@ -32,7 +32,6 @@ namespace UAS
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pipeup = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bird = new System.Windows.Forms.PictureBox();
             this.pipedown = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -47,8 +46,8 @@ namespace UAS
             this.Gameover = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.restartbutton = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pipeup)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bird)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pipedown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -61,6 +60,7 @@ namespace UAS
             ((System.ComponentModel.ISupportInitialize)(this.pipedown4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Gameover)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.restartbutton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pipeup
@@ -73,20 +73,10 @@ namespace UAS
             this.pipeup.TabIndex = 4;
             this.pipeup.TabStop = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::UAS.Properties.Resources.background_day;
-            this.pictureBox1.Location = new System.Drawing.Point(-1, -4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(501, 607);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // bird
             // 
             this.bird.BackColor = System.Drawing.Color.Transparent;
-            this.bird.Image = global::UAS.Properties.Resources.redbird_midflap;
+            this.bird.Image = global::UAS.Properties.Resources.ezgif_com_gif_maker;
             this.bird.Location = new System.Drawing.Point(34, 337);
             this.bird.Name = "bird";
             this.bird.Size = new System.Drawing.Size(58, 48);
@@ -120,7 +110,7 @@ namespace UAS
             // ground
             // 
             this.ground.Image = ((System.Drawing.Image)(resources.GetObject("ground.Image")));
-            this.ground.Location = new System.Drawing.Point(-1, 524);
+            this.ground.Location = new System.Drawing.Point(-2, 515);
             this.ground.Name = "ground";
             this.ground.Size = new System.Drawing.Size(501, 112);
             this.ground.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -194,7 +184,7 @@ namespace UAS
             // 
             this.Gameover.BackColor = System.Drawing.Color.Transparent;
             this.Gameover.Image = global::UAS.Properties.Resources.gameover;
-            this.Gameover.Location = new System.Drawing.Point(122, 145);
+            this.Gameover.Location = new System.Drawing.Point(117, 171);
             this.Gameover.Name = "Gameover";
             this.Gameover.Size = new System.Drawing.Size(324, 83);
             this.Gameover.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -205,10 +195,12 @@ namespace UAS
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("OCR A Extended", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Bahnschrift Condensed", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 37);
+            this.label1.Size = new System.Drawing.Size(45, 58);
             this.label1.TabIndex = 13;
             this.label1.Text = "0";
             // 
@@ -216,23 +208,33 @@ namespace UAS
             // 
             this.restartbutton.BackColor = System.Drawing.Color.Transparent;
             this.restartbutton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.restartbutton.Image = global::UAS.Properties.Resources.restartbutton1;
-            this.restartbutton.Location = new System.Drawing.Point(167, 337);
+            this.restartbutton.Image = ((System.Drawing.Image)(resources.GetObject("restartbutton.Image")));
+            this.restartbutton.Location = new System.Drawing.Point(175, 319);
             this.restartbutton.Name = "restartbutton";
             this.restartbutton.Size = new System.Drawing.Size(201, 66);
-            this.restartbutton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.restartbutton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.restartbutton.TabIndex = 14;
             this.restartbutton.TabStop = false;
             this.restartbutton.Visible = false;
             this.restartbutton.Click += new System.EventHandler(this.restartbutton_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::UAS.Properties.Resources.background_day;
+            this.pictureBox1.Location = new System.Drawing.Point(-2, -1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(501, 604);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(497, 601);
-            this.Controls.Add(this.restartbutton);
             this.Controls.Add(this.Gameover);
+            this.Controls.Add(this.restartbutton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pipeup4);
             this.Controls.Add(this.pipedown4);
@@ -246,6 +248,7 @@ namespace UAS
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.bird);
             this.Controls.Add(this.pictureBox1);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -253,7 +256,6 @@ namespace UAS
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.pipeup)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bird)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pipedown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -266,14 +268,13 @@ namespace UAS
             ((System.ComponentModel.ISupportInitialize)(this.pipedown4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Gameover)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.restartbutton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox bird;
         private System.Windows.Forms.PictureBox pipedown;
         private System.Windows.Forms.PictureBox pictureBox3;
@@ -289,6 +290,7 @@ namespace UAS
         private System.Windows.Forms.PictureBox Gameover;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox restartbutton;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

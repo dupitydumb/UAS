@@ -25,8 +25,8 @@ namespace UAS
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            Form1 f1 = new Form1();
-            f1.Show();
+            Menu Menu = new Menu();
+            Menu.Show();
             timer1.Stop();
             this.Hide();
         }
@@ -34,7 +34,7 @@ namespace UAS
         private void Splash_Shown(object sender, EventArgs e)
         {
             timer1.Start();
-            timer1.Tick += timer1_Tick;
+            
         }
     }
 }
